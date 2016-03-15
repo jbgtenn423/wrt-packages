@@ -1,0 +1,18 @@
+Index: efax-0.9a-001114/Makefile
+===================================================================
+--- efax-0.9a-001114.orig/Makefile
++++ efax-0.9a-001114/Makefile
+@@ -25,11 +25,11 @@ all:	efax efix
+ 
+ efax:	efax.o efaxlib.o efaxio.o efaxos.o efaxmsg.o
+ 	$(CC) -o efax $(LDFLAGS) efax.o efaxlib.o efaxio.o efaxos.o efaxmsg.o
+-	strip efax
++	#strip efax
+ 
+ efix:	efix.o efaxlib.o efaxmsg.o
+ 	$(CC) -o efix $(LDFLAGS) efix.o efaxlib.o efaxmsg.o
+-	strip efix
++	#strip efix
+ 
+ install:
+ 	cp fax efax efix $(BINDIR)

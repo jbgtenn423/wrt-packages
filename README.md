@@ -1,2 +1,3 @@
-# buildroot-packages
-OpenWrt Buildroot packages for embedded devices
+Adrian Günter's OpenWrt Buildroot package feed
+
+See: https://wiki.openwrt.org/doc/devel/feeds#working_with_feeds
