@@ -44,23 +44,23 @@ CONFIGURE_VARS += \
   CFLAGS="$(TARGET_CFLAGS) -Wall -DAUTO_PPP" \
   LDFLAGS="$(TARGET_LDFLAGS)" \
   HOSTCC="$(HOSTCC_NOCACHE)" \
-	HOSTCFLAGS="-O2 -Wall" \
+  HOSTCFLAGS="-O2 -Wall" \
   ECHO="echo" \
-	INSTALL="install -c --strip-program=$(word 1,$(STRIP))" \
+  INSTALL="install -c --strip-program=$(word 1,$(STRIP))" \
   prefix="$(prefix)" \
   spool="$(spool)" \
   FAX_SPOOL="$(spool)/fax" \
   FAX_SPOOL_IN="$(spool)/fax/in" \
   FAX_SPOOL_OUT="$(spool)/fax/out" \
   FAX_OUT_USER="0" \
-	PHONE_GROUP="dialout" \
-	PHONE_PERMS="770" \
-	LIBDIR="$(lib)" \
-	CONFDIR="$(conf)" \
+  PHONE_GROUP="dialout" \
+  PHONE_PERMS="770" \
+  LIBDIR="$(lib)" \
+  CONFDIR="$(conf)" \
   MAN1DIR="$(man)1" \
   MAN4DIR="$(man)4" \
-	MAN5DIR="$(man)5" \
-	MAN8DIR="$(man)8" \
+  MAN5DIR="$(man)5" \
+  MAN8DIR="$(man)8" \
 
 define Build/Configure
 	@echo -e "\n=== Build/Configure ==="
@@ -264,3 +264,4 @@ $(eval $(call BuildPackage,mgetty-voice))
 
 debug:
 	$(foreach v, $(.VARIABLES), $(info $(v) = $($(v))))
+

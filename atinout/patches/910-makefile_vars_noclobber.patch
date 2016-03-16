@@ -1,0 +1,19 @@
+--- a/Makefile
++++ b/Makefile
+@@ -1,12 +1,12 @@
+ VERSION	= 0.9.1
+ 
+-PREFIX	= /usr
++PREFIX	?= /usr
+ 
+-CC	= gcc
+-CFLAGS	= -W -Wall -Wextra -Werror \
++CC	?= gcc
++CFLAGS	?= -W -Wall -Wextra -Werror \
+ 	-DVERSION=\"$(VERSION)\" \
+ 	-g
+-LDFLAGS =
++LDFLAGS ?=
+ 
+ all: atinout
+ 

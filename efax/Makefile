@@ -8,15 +8,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=efax
+PKG_VERSION:=0.9a-001114
+PKG_RELEASE:=2
+PKG_LICENSE:=GPL-2.0
+PKG_LICENSE_FILE:=COPYING
 PKG_MAINTAINER:=Adrian Guenter <a@gntr.me>
 
-PKG_VERSION:=0.9a-001114
-PKG_MD5SUM:=9b7dc52656f5cbec846a7ba3299f73bd
-PKG_RELEASE:=1
-
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_URL:=https://www.cce.com/efax/download/
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://www.cce.com/efax/download/
+PKG_MD5SUM:=9b7dc52656f5cbec846a7ba3299f73bd
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -25,16 +25,14 @@ define Package/efax
   CATEGORY:=Utilities
   SUBMENU:=Telephony
   URL:=https://www.cce.com/efax/
-  TITLE:=efax
+  TITLE:=Small bidirectional fax utility
   DEPENDS:=
 endef
 
-define Package/hylafax/description
+define Package/efax/description
  A small ANSI C/POSIX program which sends and receives 
  faxes using any fax modem (Class 1, 2 or 2.0).
 endef
-
-
 
 define Build/Configure
 	$(call Build/Configure/Default,--with-linux-headers=$(LINUX_DIR))
